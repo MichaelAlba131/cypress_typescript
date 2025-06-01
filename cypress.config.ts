@@ -1,3 +1,8 @@
+/**
+ * @license MIT
+ * Copyright (c) 2025 Michael Alba
+ */
+
 // @ts-ignore
 import { defineConfig, PluginEvents, PluginConfigOptions } from 'cypress';
 import { addCucumberPreprocessorPlugin } from '@badeball/cypress-cucumber-preprocessor';
