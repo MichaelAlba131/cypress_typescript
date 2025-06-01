@@ -1,4 +1,4 @@
-<h1>🚀 Projeto Cypress BDD + Page Objects + Cypress Cloud</h1>
+<h1>🚀 Projeto Cypress TypeScript + BDD + Page Objects + Cypress Cloud</h1>
 
 <h2>🧩 Visão Geral</h2>
 <p>
@@ -14,7 +14,6 @@
     <ul>
       <li><code>e2e/</code> ➡️ Features e step-definitions (BDD)</li>
       <li><code>pages/</code> ➡️ Page Objects (mapeamento de páginas/componentes)</li>
-      <li><code>support/</code> ➡️ Hooks globais e comandos customizados do Cypress</li>
     </ul>
   </li>
 </ul>
@@ -23,11 +22,18 @@
 
 <h2>🏗️ Page Objects</h2>
 <p>Crie uma classe para cada página, facilitando manutenção e reuso dos testes.</p>
-<pre><code class="language-javascript">
-export class CadastroPage {
-    cadastro = 'a.elementor-button';
-}
-</code></pre>
+
+    export class CadastroPage {
+    cadastroSelector: string = 'a.elementor-button';
+    
+        /**
+         * Retorna o elemento do botão de cadastro.
+         * @returns Cypress.Chainable<JQuery<HTMLElement>>
+         */
+        cadastro(): Cypress.Chainable<JQuery<HTMLElement>> {
+            return cy.get(this.cadastroSelector);
+        }
+    }
 
 <hr>
 
