@@ -1,0 +1,26 @@
+{
+  "name": "cypress_javascript_cloud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --record --key fd04b883-35d3-4f58-8095-523f78ab53f5",
+    "cypress:debug": "node --inspect-brk ./node_modules/.bin/cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+    "@cypress/webpack-preprocessor": "^6.0.4",
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "@types/cypress": "^0.1.6",
+    "@types/node": "^22.15.29",
+    "allure-commandline": "^2.34.0",
+    "cypress": "^14.4.0",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.25.5",
+    "typescript": "^5.8.3"
+  },
+  "description": ""
+}
